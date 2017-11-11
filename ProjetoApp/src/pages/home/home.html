@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <br>
+  <h3 align="center" >Semeando Conhecimento</h3><br>
+
+  <div align="center" style="font-size: 15px;">
+    Podemos dizer que sustentabilidade e meio ambiente sempre “andam de mãos dadas”.<br>
+    A sustentabilidade é basicamente a capacidade que o ser humano possui de usufruir<br>
+    dos recursos naturais presentes no planeta sem compromete-los para as gerações futuras.<br>
+    Quando falamos de recursos naturais, estamos nos referindo basicamente ao meio ambiente,<br>
+    pois tudo que utilizamos no nosso dia-dia depende diretamente ou indiretamente dele.<br>
+    Preservar o meio ambiente, dessa forma, se torna um dos principais princípios da sustentabilidade. <br>
+    O significado de sustentabilidade é complexo e envolve uma série de variáveis independentes entre si.<br>
+    Porém, todos os processos e aspectos sociais, energéticos, econômicos e ambientais estão diretamente envolvidos nesse conceito.<br><br>
+  </div>
+
+  <ion-content>
+    <ion-slides pager>
+      <ion-slide *ngFor="let item of itemsFilter" >
+        <h3> Livro em destaque</h3>
+        <ion-item ion-item (click)="itemTapped($event, item)">
+          <ion-thumbnail item-start>
+            <img src="{{item.img}}">
+          </ion-thumbnail>
+          <h2>{{item.titulo}}</h2>
+        </ion-item>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
+
+
+    <div align="center">
+  <button ion-button color="secondary" menuToggle>Abrir menu</button>
+    </div>
+</ion-content>

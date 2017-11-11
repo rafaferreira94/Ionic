@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >Cadastro Usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>CPF</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Imagem</ion-label>
+
+      <ion-thumbnail item-start *ngIf="imagemUploaded">
+        <img src="{{usuario.img}}">
+      </ion-thumbnail>
+
+      <button ion-button item-right color="danger"
+              *ngIf="imagemUploaded" (click)="cancelarImagem()" >
+        <ion-icon name="camera"></ion-icon>Alterar </button>
+
+      <button ion-button item-right color="secondary"
+              *ngIf="!imagemUploaded" (click)="tirarFoto()">
+        <ion-icon name="camera"></ion-icon>&nbsp;Camera </button>
+
+      <button  ion-button item-right color="secondary"
+               *ngIf="!imagemUploaded" (click)="escolherImagem()">
+        <ion-icon name="images"></ion-icon>&nbsp;Galeria </button>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-buttons>
+    <button ion-button color="secondary"
+            (click)="salvar($event)">Salvar</button>
+    <button ion-button color="light"
+            (click)="cancelar()">Cancelar</button>
+  </ion-buttons>
+
+</ion-content>

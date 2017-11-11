@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{autor.nome}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="editarItem($event)">
+        <ion-icon name="build"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="removerItem($event)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+
+    <img src="{{autor.img}}">
+
+    <ion-item>
+      <ion-icon name="person" item-start large></ion-icon>
+      <h2>Nome: {{autor.nome}}</h2>
+      <p>Sobrenome: {{autor.sobrenome}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="buffer" item-left large ></ion-icon>
+      <h2></h2>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>
