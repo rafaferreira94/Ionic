@@ -33,6 +33,10 @@ import {AngularFireDatabaseModule} from "angularfire2/database";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {AuthService} from "../providers/auth/auth-service";
 import { AngularFireModule } from 'angularfire2';
+import {FormsModule} from "@angular/forms";
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Brightness } from '@ionic-native/brightness';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCUPDh1uZH8aYxWg8eO07W8Tnbq77KcmpM",
@@ -71,7 +75,8 @@ const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -106,7 +111,9 @@ const firebaseConfig = {
     LivroAutorProvider,
     UsuarioProvider,
     LoginProvider,
-    AuthService
+    AuthService,
+    BarcodeScanner,
+    Brightness
   ]
 })
 export class AppModule {}

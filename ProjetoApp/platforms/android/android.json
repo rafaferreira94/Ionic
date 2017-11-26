@@ -35,6 +35,22 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Flashlight\"><param name=\"android-package\" value=\"nl.xservices.plugins.Flashlight\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Brightness\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.Brightness.BrightnessPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -57,11 +73,43 @@
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\" />",
+                            "count": 1
                         }
                     ],
                     "application": [
                         {
                             "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.FLASHLIGHT\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:clearTaskOnLaunch=\"true\" android:configChanges=\"orientation|keyboardHidden|screenSize\" android:exported=\"false\" android:name=\"com.google.zxing.client.android.CaptureActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"stateAlwaysHidden\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"Share\" android:name=\"com.google.zxing.client.android.encode.EncodeActivity\" />",
                             "count": 1
                         }
                     ]
@@ -95,6 +143,21 @@
             "PACKAGE_NAME": "io.ionic.starter"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-flashlight": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-touch-id": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-brightness": {
             "PACKAGE_NAME": "io.ionic.starter"
         }
     },
@@ -178,6 +241,47 @@
             "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
             "pluginId": "cordova-plugin-geolocation",
             "runs": true
+        },
+        {
+            "id": "cordova-plugin-vibration.notification",
+            "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+            "pluginId": "cordova-plugin-vibration",
+            "merges": [
+                "navigator.notification",
+                "navigator"
+            ]
+        },
+        {
+            "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+            "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+            "pluginId": "phonegap-plugin-barcodescanner",
+            "clobbers": [
+                "cordova.plugins.barcodeScanner"
+            ]
+        },
+        {
+            "id": "cordova-plugin-flashlight.Flashlight",
+            "file": "plugins/cordova-plugin-flashlight/www/Flashlight.js",
+            "pluginId": "cordova-plugin-flashlight",
+            "clobbers": [
+                "window.plugins.flashlight"
+            ]
+        },
+        {
+            "id": "cordova-plugin-touch-id.TouchID",
+            "file": "plugins/cordova-plugin-touch-id/www/TouchID.js",
+            "pluginId": "cordova-plugin-touch-id",
+            "clobbers": [
+                "window.plugins.touchid"
+            ]
+        },
+        {
+            "id": "cordova-plugin-brightness.Brightness",
+            "file": "plugins/cordova-plugin-brightness/www/brightness.js",
+            "pluginId": "cordova-plugin-brightness",
+            "clobbers": [
+                "cordova.plugins.brightness"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -189,6 +293,11 @@
         "ionic-plugin-keyboard": "2.2.1",
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.4.1",
-        "cordova-plugin-geolocation": "2.4.3"
+        "cordova-plugin-geolocation": "2.4.3",
+        "cordova-plugin-vibration": "2.1.6",
+        "phonegap-plugin-barcodescanner": "6.0.8",
+        "cordova-plugin-flashlight": "3.2.0",
+        "cordova-plugin-touch-id": "3.3.1",
+        "cordova-plugin-brightness": "0.1.5"
     }
 }

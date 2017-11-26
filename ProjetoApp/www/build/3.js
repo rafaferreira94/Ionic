@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 504:
+/***/ 506:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,11 +18,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SigninPageModule = (function () {
-    function SigninPageModule() {
-    }
-    return SigninPageModule;
-}());
+let SigninPageModule = class SigninPageModule {
+};
 SigninPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [

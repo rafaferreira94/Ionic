@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 507:
+/***/ 509:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,11 +18,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var UsuarioDetailsPageModule = (function () {
-    function UsuarioDetailsPageModule() {
-    }
-    return UsuarioDetailsPageModule;
-}());
+let UsuarioDetailsPageModule = class UsuarioDetailsPageModule {
+};
 UsuarioDetailsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [

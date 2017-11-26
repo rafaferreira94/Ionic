@@ -78,6 +78,47 @@ module.exports = [
         "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
         "pluginId": "cordova-plugin-geolocation",
         "runs": true
+    },
+    {
+        "id": "cordova-plugin-vibration.notification",
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+        "pluginId": "phonegap-plugin-barcodescanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
+    },
+    {
+        "id": "cordova-plugin-flashlight.Flashlight",
+        "file": "plugins/cordova-plugin-flashlight/www/Flashlight.js",
+        "pluginId": "cordova-plugin-flashlight",
+        "clobbers": [
+            "window.plugins.flashlight"
+        ]
+    },
+    {
+        "id": "cordova-plugin-touch-id.TouchID",
+        "file": "plugins/cordova-plugin-touch-id/www/TouchID.js",
+        "pluginId": "cordova-plugin-touch-id",
+        "clobbers": [
+            "window.plugins.touchid"
+        ]
+    },
+    {
+        "id": "cordova-plugin-brightness.Brightness",
+        "file": "plugins/cordova-plugin-brightness/www/brightness.js",
+        "pluginId": "cordova-plugin-brightness",
+        "clobbers": [
+            "cordova.plugins.brightness"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -91,7 +132,12 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.1",
-    "cordova-plugin-geolocation": "2.4.3"
+    "cordova-plugin-geolocation": "2.4.3",
+    "cordova-plugin-vibration": "2.1.6",
+    "phonegap-plugin-barcodescanner": "6.0.8",
+    "cordova-plugin-flashlight": "3.2.0",
+    "cordova-plugin-touch-id": "3.3.1",
+    "cordova-plugin-brightness": "0.1.5"
 };
 // BOTTOM OF METADATA
 });

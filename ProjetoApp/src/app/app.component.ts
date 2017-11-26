@@ -42,15 +42,6 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    // firebase.initializeApp({
-    //   apiKey: "AIzaSyCUPDh1uZH8aYxWg8eO07W8Tnbq77KcmpM",
-    //   authDomain: "projetoapp-3dd62.firebaseapp.com",
-    //   databaseURL: "https://projetoapp-3dd62.firebaseio.com",
-    //   projectId: "projetoapp-3dd62",
-    //   storageBucket: "projetoapp-3dd62.appspot.com",
-    //   messagingSenderId: "673889262735"
-    // });
-
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.getMenuLogado();
@@ -69,19 +60,16 @@ export class MyApp {
   getMenuLogado() {
     this.pages = [
       { title: 'Home', component: HomePage },
-      //{ title: 'List', component: ListPage },
-      { title: 'Livros', component: LivroListPage },
+      { title: 'Livro', component: LivroListPage },
+      { title: 'Autor', component: AutorListPage },
+      { title: 'Usuario', component: UsuarioListPage },
+      { title: 'Sobre', component: SobrePage },
       { title: 'Sair', component: null },
     ];
   }
 
   getMenuAnonimo() {
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Livro', component: LivroListPage },
-      { title: 'Autor', component: AutorListPage },
-      { title: 'Usuario', component: UsuarioListPage },
-      { title: 'Sobre', component: SobrePage },
       { title: 'SignIn', component: SigninPage },
     ];
   }

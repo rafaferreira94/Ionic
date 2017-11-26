@@ -30,6 +30,21 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-flashlight": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-touch-id": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-brightness": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {

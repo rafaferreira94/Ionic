@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { NavController, NavParams, ToastController, IonicPage} from "ionic-angular";
+//import { TouchID } from '@ionic-native/touch-id';
 
 // import {LoginProvider} from "../../providers/login";
 import {HomePage} from "../home/home";
@@ -20,46 +21,33 @@ export class SigninPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              // private loginProvider: LoginProvider,
-              // private loadingCtrl: LoadingController,
-              // private alertCtrl: AlertController,
               private toastCtrl: ToastController,
-              private authService: AuthService) {
-  }
+              private authService: AuthService,
+              //private touchId: TouchID
+  ){
 
-  // onSignin(form: NgForm) {
-  //   const loading = this.loadingCtrl.create({
-  //     content: 'Autenticando...'
-  //   });
-  //
-  //   loading.present();
-  //     this.loginProvider.signin(form.value.email, form.value.password)
-  //     .then(data => {
-  //       loading.dismiss();
-  //       this.navCtrl.push(HomePage, {});
-  //     })
-  //     .catch(error => {
-  //       loading.dismiss();
-  //
-  //       console.log(error);
-  //
-  //       const alert = this.alertCtrl.create({
-  //         title: 'Login falhou!',
-  //         message: error.message,
-  //         buttons: ['Ok']
-  //       });
-  //       alert.present();
-  //     });
+  }
+//   VerificaTouch(){
+//   this.touchId.isAvailable()
+// .then(
+//     res => console.log('TouchID is available!'),
+//   err => console.error('TouchID is not available', err)
+// );
   // }
-  //
-  // novoUsuario() {
-  //   this.navCtrl.push(SignupPage, {});
-  // }
+//   ScanTouch(){
+//   this.touchId.verifyFingerprint('Scan your fingerprint please')
+// .then(
+//     res => console.log('Ok', res),
+//   err => console.error('Error', err)
+// );
+//  }
+
+
   createAccount() {
     this.navCtrl.push(SignupPage);
   }
 
-  resetePassword(){
+  resetPassword(){
     this.navCtrl.push(ResetpasswordPage);
   }
 

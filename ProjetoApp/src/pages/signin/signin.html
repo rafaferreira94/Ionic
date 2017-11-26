@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="secondary">
     <ion-title>
       Login
     </ion-title>
@@ -8,12 +8,12 @@
 
 <ion-content padding>
 
-  <form #form ="nfForm">
+  <form #form ="ngForm">
     <ion-list>
 
     <ion-item>
       <ion-label stacked> E-mail </ion-label>
-      <ion-input type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required></ion-input>
+      <ion-input type="text" name="email" [(ngModel)]="user.email" #email="ngModel" color="secondary" required></ion-input>
     </ion-item>
     <ion-item  class="text-danger">
       O campo e obrigatorio
@@ -21,7 +21,7 @@
 
     <ion-item>
       <ion-label stacked> Senha </ion-label>
-      <ion-input type="password" name="password" [(ngModel)]="user.password" #email="ngModel" required></ion-input>
+      <ion-input type="password" name="password" [(ngModel)]="user.password" #email="ngModel" color="secondary" required></ion-input>
     </ion-item>
 
     <ion-item  class="text-danger">
@@ -30,18 +30,17 @@
 
     </ion-list>
 
-      <button ion-button block color="primary" (click)="signIn()">
+      <button ion-button block color="secondary" (click)="signIn()">
         Entrar
       </button>
   </form>
 
-    <button ion-button block clear margin-top (click)="resetPassword()">
+    <button ion-button block clear color="secondary" margin-top (click)="resetPassword()">
       Esqueci minha senha
     </button>
 
-    <button ion-button block clear (click)="createAccount()">
+    <button ion-button block clear color="secondary" (click)="createAccount()">
       Criar conta
     </button>
-
 
 </ion-content>
